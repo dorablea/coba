@@ -8,7 +8,7 @@
   <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -1026,6 +1026,27 @@
     }
     .nav-item.active, .nav-item:hover { background: linear-gradient(180deg, #f0d78c, #c29638); box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 3px 6px rgba(0,0,0,.35); }
     .jawa-divider::before, .jawa-divider::after { height: 2px; box-shadow: 0 1px 0 rgba(255,255,255,.8); }
+
+    /* ================= ORNAMEN V2: rujukan Pinterest (ivory-champagne, melati, lily, aksara emas) ================= */
+    #cover-overlay { background: var(--grain), radial-gradient(ellipse at 50% 30%, #fbf3e2 0%, #ecd9b6 60%, #cfae78 100%); }
+    .cover-frame { box-shadow: 0 0 0 3px #c29638, 0 0 0 5px #7a5210, 0 0 0 6px #f0d78c, 0 26px 50px rgba(90,60,20,.4), 0 8px 18px rgba(90,60,20,.25), inset 0 0 60px rgba(194,150,56,.16); }
+    .floral-corner { width: 150px !important; height: 150px !important; filter: drop-shadow(1px 4px 4px rgba(45,27,16,.3)); }
+    .cover-frame .floral-corner { width: 168px !important; height: 168px !important; }
+    .opening-card .floral-corner, .couple-card .floral-corner, .gift-card .floral-corner, .rsvp-card .floral-corner { width: 112px !important; height: 112px !important; }
+    .garland { position: absolute; top: 0; left: 0; width: 100%; height: auto; pointer-events: none; z-index: 2; filter: drop-shadow(1px 3px 2px rgba(45,27,16,.25)); transform-origin: 50% 0; animation: sway 6s ease-in-out infinite alternate; }
+    .garland-cover { top: 8px; }
+    .hero-section > .garland { display: none; }
+    @keyframes sway { from { transform: rotate(-.6deg); } to { transform: rotate(.6deg); } }
+    .cover-names, .hero-names {
+      font-family: 'Great Vibes', cursive; font-weight: 400; letter-spacing: .5px;
+      background: linear-gradient(170deg, #7a5210 0%, #c29638 30%, #e8c766 50%, #a67a22 72%, #6d4a10 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none;
+      filter: drop-shadow(0 1px 0 rgba(255,255,255,.85)) drop-shadow(0 3px 4px rgba(45,27,16,.22));
+    }
+    .cover-names { font-size: 4rem; line-height: 1.02; }
+    .cover-names span { font-family: 'Playfair Display', serif; font-size: 1.3rem; }
+    .hero-names { font-size: 3.4rem; line-height: 1.1; }
+    .garland-cover + div, .cover-tag { position: relative; z-index: 3; }
   </style>
 </head>
 <body class="locked">
@@ -1035,37 +1056,36 @@
     <defs>
       <!-- Ornamen Rangkaian Bunga Melati, Mawar & Daun Jawa -->
       <g id="jawa-floral-spray">
-        <!-- Sulur Emas -->
-        <path d="M6,96 C14,54 46,20 98,8" fill="none" stroke="#C29638" stroke-width="1.6" stroke-linecap="round"/>
-        <path d="M12,72 C32,58 52,46 74,24" fill="none" stroke="#DFBD69" stroke-width="1.2" stroke-linecap="round"/>
-        <!-- Daun Sirih / Pakis Hijau Zaitun -->
-        <path d="M22,64 C10,54 14,38 28,44 C32,54 28,60 22,64 Z" fill="#5C6B4D" opacity="0.88"/>
-        <path d="M46,36 C36,22 44,10 56,20 C56,30 50,34 46,36 Z" fill="#5C6B4D" opacity="0.85"/>
-        <path d="M36,54 C48,54 56,64 44,68 C36,66 35,58 36,54 Z" fill="#71825F" opacity="0.85"/>
-        <path d="M64,22 C74,24 80,34 68,36 C61,33 62,25 64,22 Z" fill="#71825F" opacity="0.82"/>
-        <!-- Bunga Mawar Klasik -->
-        <circle cx="26" cy="30" r="12" fill="#B96A55" opacity="0.9"/>
-        <circle cx="26" cy="30" r="8" fill="#CE826E"/>
-        <circle cx="26" cy="30" r="4" fill="#F3E6D3"/>
-        <!-- Kuntum Melati Jawa -->
-        <g transform="translate(52, 46)">
-          <circle cx="0" cy="-5" r="3.5" fill="#FCF8F0" stroke="#C29638" stroke-width="0.6"/>
-          <circle cx="5" cy="0" r="3.5" fill="#FCF8F0" stroke="#C29638" stroke-width="0.6"/>
-          <circle cx="0" cy="5" r="3.5" fill="#FCF8F0" stroke="#C29638" stroke-width="0.6"/>
-          <circle cx="-5" cy="0" r="3.5" fill="#FCF8F0" stroke="#C29638" stroke-width="0.6"/>
-          <circle cx="0" cy="0" r="2.2" fill="#C29638"/>
-        </g>
-        <g transform="translate(76, 15) scale(0.8)">
-          <circle cx="0" cy="-5" r="3.5" fill="#FCF8F0" stroke="#C29638" stroke-width="0.6"/>
-          <circle cx="5" cy="0" r="3.5" fill="#FCF8F0" stroke="#C29638" stroke-width="0.6"/>
-          <circle cx="0" cy="5" r="3.5" fill="#FCF8F0" stroke="#C29638" stroke-width="0.6"/>
-          <circle cx="-5" cy="0" r="3.5" fill="#FCF8F0" stroke="#C29638" stroke-width="0.6"/>
-          <circle cx="0" cy="0" r="2.2" fill="#C29638"/>
-        </g>
+        <path d="M4,106 C10,62 42,22 104,8" fill="none" stroke="url(#goldG)" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M16,82 C30,64 52,50 76,30" fill="none" stroke="url(#goldG)" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M30,50 C40,34 56,24 74,16" fill="none" stroke="#C29638" stroke-width=".8" opacity=".7"/>
+        <use href="#lf" transform="translate(12,92) rotate(-62) scale(1.05)"/>
+        <use href="#lf" transform="translate(18,70) rotate(-150) scale(.95)"/>
+        <use href="#lf" transform="translate(40,44) rotate(-28) scale(1.1)"/>
+        <use href="#lf" transform="translate(52,34) rotate(-118) scale(.9)"/>
+        <use href="#lf" transform="translate(72,22) rotate(-12) scale(1)"/>
+        <use href="#lf" transform="translate(30,64) rotate(20) scale(.8)"/>
+        <use href="#lily" transform="translate(26,36) scale(.78) rotate(-14)"/>
+        <use href="#lily" transform="translate(14,66) scale(.52) rotate(30)"/>
+        <use href="#lily" transform="translate(58,22) scale(.5) rotate(10)"/>
+        <use href="#mel" transform="translate(44,52) scale(.9)"/>
+        <use href="#mel" transform="translate(40,26) scale(.8)"/>
+        <use href="#mel" transform="translate(80,12) scale(.75)"/>
+        <use href="#mel" transform="translate(22,84) scale(.7)"/>
+        <use href="#mel" transform="translate(70,36) scale(.6)"/>
+        <circle cx="94" cy="9" r="1.6" fill="#E8C766"/><circle cx="50" cy="66" r="1.3" fill="#E8C766"/><circle cx="8" cy="52" r="1.3" fill="#E8C766"/>
       </g>
-
-      <!-- Emblem Gunungan Wayang Jawa -->
-      <g id="gunungan-icon">
+      <linearGradient id="goldG" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#946D1E"/><stop offset=".5" stop-color="#EBCB72"/><stop offset="1" stop-color="#B8892B"/></linearGradient>
+      <linearGradient id="petG" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#EAD08C"/><stop offset=".35" stop-color="#FFF8E8"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+      <linearGradient id="leafG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3E5232"/><stop offset=".6" stop-color="#6F8559"/><stop offset="1" stop-color="#93A877"/></linearGradient>
+      <g id="pet"><path d="M0,0 C-8,-6 -9,-18 0,-27 C9,-18 8,-6 0,0Z" fill="url(#petG)" stroke="#C9A24A" stroke-width=".5" stroke-opacity=".7"/><path d="M0,-1 C-3,-8 -3,-15 0,-22 C3,-15 3,-8 0,-1Z" fill="#E9D2A0" opacity=".45"/><path d="M0,-2 L0,-21" stroke="#CDB57C" stroke-width=".4"/></g>
+      <g id="lily"><use href="#pet" transform="rotate(-144)"/><use href="#pet" transform="rotate(144)"/><use href="#pet" transform="rotate(-72)"/><use href="#pet" transform="rotate(72)"/><use href="#pet"/>
+        <g stroke="#B8892B" stroke-width=".6"><path d="M0,0 L-5,-9 M0,0 L0,-11 M0,0 L5,-9 M0,0 L-8,-4 M0,0 L8,-4"/></g>
+        <g fill="#C9892B"><circle cx="-5" cy="-9" r="1.2"/><circle cy="-11" r="1.2"/><circle cx="5" cy="-9" r="1.2"/><circle cx="-8" cy="-4" r="1.1"/><circle cx="8" cy="-4" r="1.1"/></g><circle r="2.4" fill="#9FB07C"/></g>
+      <g id="mel"><g fill="#FFFDF6" stroke="#C29638" stroke-width=".45"><ellipse cy="-4.6" rx="2.5" ry="4.6"/><ellipse cy="-4.6" rx="2.5" ry="4.6" transform="rotate(72)"/><ellipse cy="-4.6" rx="2.5" ry="4.6" transform="rotate(144)"/><ellipse cy="-4.6" rx="2.5" ry="4.6" transform="rotate(216)"/><ellipse cy="-4.6" rx="2.5" ry="4.6" transform="rotate(288)"/></g><circle r="1.5" fill="#E8C766"/></g>
+      <g id="lf"><path d="M0,0 C8,-8 20,-8 30,0 C20,8 8,8 0,0Z" fill="url(#leafG)"/><path d="M1,0 L28,0" stroke="#D8E3C0" stroke-width=".5" opacity=".7"/><path d="M8,0 L14,-4 M8,0 L14,4 M16,0 L22,-3 M16,0 L22,3" stroke="#D8E3C0" stroke-width=".4" opacity=".5"/></g>
+      <g id="finial"><path d="M0,26 C-14,22 -16,8 -8,2 C-6,10 -2,12 0,6 C2,12 6,10 8,2 C16,8 14,22 0,26Z" fill="url(#goldG)"/><path d="M0,22 C-4,16 -3,8 0,2 C3,8 4,16 0,22Z" fill="#FFF3C4" opacity=".85"/><circle cy="-2" r="3" fill="url(#goldG)"/></g>
+<g id="gunungan-icon">
         <path d="M50,4 C68,26 88,54 90,94 L72,94 L66,108 L34,108 L28,94 L10,94 C12,54 32,26 50,4 Z" fill="#FCF8F0" stroke="#C29638" stroke-width="2.2"/>
         <path d="M50,12 C64,31 80,55 82,88 L18,88 C20,55 36,31 50,12 Z" fill="none" stroke="#946D1E" stroke-width="1"/>
         <!-- Pohon Hayat & Sulur di dalam Gunungan -->
@@ -1127,6 +1147,7 @@ Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir
   <!-- 1 & 2. COVER OVERLAY WITH DYNAMIC ?to= GUEST NAME -->
   <div id="cover-overlay">
     <div class="cover-frame">
+      <svg class="garland garland-cover" viewBox="0 0 430 260" preserveAspectRatio="xMidYMin meet" aria-hidden="true"><line x1="47" y1="91" x2="47" y2="183" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(47,99) scale(.62)"/><circle cx="47" cy="108" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(47,117) scale(.62)"/><circle cx="47" cy="126" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(47,135) scale(.62)"/><circle cx="47" cy="144" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(47,153) scale(.62)"/><circle cx="47" cy="162" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(47,171) scale(.62)"/><path d="M47,183 C43,188 44,192 47,196 C50,192 51,188 47,183Z" fill="url(#goldG)"/><line x1="383" y1="91" x2="383" y2="183" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(383,99) scale(.62)"/><circle cx="383" cy="108" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(383,117) scale(.62)"/><circle cx="383" cy="126" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(383,135) scale(.62)"/><circle cx="383" cy="144" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(383,153) scale(.62)"/><circle cx="383" cy="162" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(383,171) scale(.62)"/><path d="M383,183 C379,188 380,192 383,196 C386,192 387,188 383,183Z" fill="url(#goldG)"/><line x1="27" y1="121" x2="27" y2="203" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(27,129) scale(.62)"/><circle cx="27" cy="138" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(27,147) scale(.62)"/><circle cx="27" cy="156" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(27,165) scale(.62)"/><circle cx="27" cy="174" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(27,183) scale(.62)"/><circle cx="27" cy="192" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><path d="M27,203 C23,208 24,212 27,216 C30,212 31,208 27,203Z" fill="url(#goldG)"/><line x1="403" y1="121" x2="403" y2="203" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(403,129) scale(.62)"/><circle cx="403" cy="138" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(403,147) scale(.62)"/><circle cx="403" cy="156" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(403,165) scale(.62)"/><circle cx="403" cy="174" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(403,183) scale(.62)"/><circle cx="403" cy="192" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><path d="M403,203 C399,208 400,212 403,216 C406,212 407,208 403,203Z" fill="url(#goldG)"/><line x1="11" y1="157" x2="11" y2="221" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(11,165) scale(.62)"/><circle cx="11" cy="174" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(11,183) scale(.62)"/><circle cx="11" cy="192" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(11,201) scale(.62)"/><circle cx="11" cy="210" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><path d="M11,221 C7,226 8,230 11,234 C14,230 15,226 11,221Z" fill="url(#goldG)"/><line x1="419" y1="157" x2="419" y2="221" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(419,165) scale(.62)"/><circle cx="419" cy="174" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(419,183) scale(.62)"/><circle cx="419" cy="192" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(419,201) scale(.62)"/><circle cx="419" cy="210" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><path d="M419,221 C415,226 416,230 419,234 C422,230 423,226 419,221Z" fill="url(#goldG)"/><use href="#finial" transform="translate(215,10) scale(.8)"/></svg>
       <!-- Ornamen Floral Jawa Bawah Kiri & Kanan Sampul -->
       <svg class="floral-corner floral-bl" viewBox="0 0 110 110"><use href="#jawa-floral-spray"/></svg>
       <svg class="floral-corner floral-br" viewBox="0 0 110 110"><use href="#jawa-floral-spray"/></svg>
@@ -1177,6 +1198,7 @@ Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir
 
     <!-- HERO & OPENING QUOTE -->
     <section id="home" class="hero-section">
+      <svg class="garland" viewBox="0 0 480 190" preserveAspectRatio="xMidYMin meet" aria-hidden="true"><line x1="20" y1="0" x2="20" y2="64" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(20,8) scale(.62)"/><circle cx="20" cy="17" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(20,26) scale(.62)"/><circle cx="20" cy="35" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(20,44) scale(.62)"/><circle cx="20" cy="53" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><path d="M20,64 C16,69 17,73 20,77 C23,73 24,69 20,64Z" fill="url(#goldG)"/><line x1="460" y1="0" x2="460" y2="64" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(460,8) scale(.62)"/><circle cx="460" cy="17" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(460,26) scale(.62)"/><circle cx="460" cy="35" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(460,44) scale(.62)"/><circle cx="460" cy="53" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><path d="M460,64 C456,69 457,73 460,77 C463,73 464,69 460,64Z" fill="url(#goldG)"/><line x1="44" y1="0" x2="44" y2="112" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(44,8) scale(.62)"/><circle cx="44" cy="17" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(44,26) scale(.62)"/><circle cx="44" cy="35" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(44,44) scale(.62)"/><circle cx="44" cy="53" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(44,62) scale(.62)"/><circle cx="44" cy="71" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(44,80) scale(.62)"/><circle cx="44" cy="89" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(44,98) scale(.62)"/><path d="M44,112 C40,117 41,121 44,125 C47,121 48,117 44,112Z" fill="url(#goldG)"/><line x1="436" y1="0" x2="436" y2="112" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(436,8) scale(.62)"/><circle cx="436" cy="17" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(436,26) scale(.62)"/><circle cx="436" cy="35" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(436,44) scale(.62)"/><circle cx="436" cy="53" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(436,62) scale(.62)"/><circle cx="436" cy="71" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(436,80) scale(.62)"/><circle cx="436" cy="89" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(436,98) scale(.62)"/><path d="M436,112 C432,117 433,121 436,125 C439,121 440,117 436,112Z" fill="url(#goldG)"/><line x1="68" y1="0" x2="68" y2="146" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(68,8) scale(.62)"/><circle cx="68" cy="17" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(68,26) scale(.62)"/><circle cx="68" cy="35" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(68,44) scale(.62)"/><circle cx="68" cy="53" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(68,62) scale(.62)"/><circle cx="68" cy="71" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(68,80) scale(.62)"/><circle cx="68" cy="89" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(68,98) scale(.62)"/><circle cx="68" cy="107" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(68,116) scale(.62)"/><circle cx="68" cy="125" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(68,134) scale(.62)"/><path d="M68,146 C64,151 65,155 68,159 C71,155 72,151 68,146Z" fill="url(#goldG)"/><line x1="412" y1="0" x2="412" y2="146" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(412,8) scale(.62)"/><circle cx="412" cy="17" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(412,26) scale(.62)"/><circle cx="412" cy="35" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(412,44) scale(.62)"/><circle cx="412" cy="53" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(412,62) scale(.62)"/><circle cx="412" cy="71" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(412,80) scale(.62)"/><circle cx="412" cy="89" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(412,98) scale(.62)"/><circle cx="412" cy="107" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(412,116) scale(.62)"/><circle cx="412" cy="125" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(412,134) scale(.62)"/><path d="M412,146 C408,151 409,155 412,159 C415,155 416,151 412,146Z" fill="url(#goldG)"/><line x1="92" y1="0" x2="92" y2="92" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(92,8) scale(.62)"/><circle cx="92" cy="17" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(92,26) scale(.62)"/><circle cx="92" cy="35" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(92,44) scale(.62)"/><circle cx="92" cy="53" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(92,62) scale(.62)"/><circle cx="92" cy="71" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(92,80) scale(.62)"/><path d="M92,92 C88,97 89,101 92,105 C95,101 96,97 92,92Z" fill="url(#goldG)"/><line x1="388" y1="0" x2="388" y2="92" stroke="#CDB98A" stroke-width="1"/><use href="#mel" transform="translate(388,8) scale(.62)"/><circle cx="388" cy="17" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(388,26) scale(.62)"/><circle cx="388" cy="35" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(388,44) scale(.62)"/><circle cx="388" cy="53" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(388,62) scale(.62)"/><circle cx="388" cy="71" r="2.1" fill="#FFFDF6" stroke="#C29638" stroke-width=".5"/><use href="#mel" transform="translate(388,80) scale(.62)"/><path d="M388,92 C384,97 385,101 388,105 C391,101 392,97 388,92Z" fill="url(#goldG)"/></svg>
       <svg class="floral-corner floral-tl" viewBox="0 0 110 110"><use href="#jawa-floral-spray"/></svg>
       <svg class="floral-corner floral-tr" viewBox="0 0 110 110"><use href="#jawa-floral-spray"/></svg>
 
